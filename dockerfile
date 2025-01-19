@@ -19,4 +19,4 @@ EXPOSE 4323
 
 WORKDIR /app/my-website
 # Run app.py when the container launches
-CMD ["python", "app.py"]
+CMD ["python", "server.py"]
