@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Now Playing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+    h1 {
+      margin-bottom: 15px;
+      font-size: 24px;
+      color: #444;
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      color: #007BFF;
+    }
+    a {
+      display: inline-block;
+      padding: 10px 15px;
+      margin-top: 15px;
+      background: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    a:hover {
+      background: #0056b3;
+    }
+  </style>
+  <meta http-equiv="refresh" content="10">
+</head>
+<body>
+    <script>
+        setInterval(() => {
+    location.reload();
+}, 10000);
+    </script>
+  <div class="container">
+    {% if current_song %}
+      <h1>Now Playing</h1>
+      <h2>{{ current_song }}</h2>
+      <a href="next">Next Song</a>
+    {% else %}
+      <h1>No Songs in the Queue</h1>
+      <a href="">Go Back</a>
+    {% endif %}
+  </div>
+</body>
+</html>
