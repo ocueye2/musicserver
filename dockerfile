@@ -17,6 +17,6 @@ RUN pip install flask
 # Make port 8080 available to the world outside this container
 EXPOSE 4323
 
-WORKDIR /app/my-website
+WORKDIR /app/musicserver
 # Run app.py when the container launches
 CMD ["python", "app.py"]
